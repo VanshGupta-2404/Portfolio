@@ -1,32 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VANSH GUPTA- Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Add any additional meta tags or external stylesheets here -->
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <h1>VANSH GUPTA</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!-- Add more navigation links as needed -->
-                </ul>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Vansh Gupta</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Vansh Gupta</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </header>
-
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Vansh Gupta profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Vansh Gupta</h1>
+        <p class="section__text__p2">Machine Learning and Backend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/vansh-gupta-06a5aa223'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/VanshGupta-2404'"
+          />
+        </div>
+      </div>
+    </section>
     <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi there! I'm Vansh Gupta, a passionate student currently pursuing my B.Tech in Computer Science and Engineering with a major focus on Artificial Intelligence at Parul University.
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Projects</h3>
+              <p>4 major and 2 minor projects<br /></p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>BTech. Bachelors Degree </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+               Hi there! I'm Vansh Gupta, a passionate student currently pursuing my B.Tech in Computer Science and Engineering with a major focus on Artificial Intelligence at Parul University.
                 
                 Ever since I embarked on my journey into the world of technology, I've been captivated by the endless possibilities that Machine Learning and Artificial Intelligence offer. I thrive on the challenges and excitement of being at the forefront of this rapidly evolving field.
                 
@@ -41,61 +114,227 @@
                 I'm excited about the possibilities that lie ahead and am eager to leverage my skills and passion to contribute positively to the ever-evolving landscape of Artificial Intelligence.
                 
                 Feel free to connect with me to discuss AI, technology, or anything that sparks your curiosity!
-                </p>
-            <!-- Add more content about yourself -->
+            </p>
+          </div>
         </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            
-            <div class="portfolio-item">
-                
-                <h3>Portfolio Topic 1</h3>
-                <p>Creating Chatbot Using LLM for Government Website:</p>
-                    <p>Developed a sophisticated chatbot leveraging Language Models (LLMs) to enhance user interaction and accessibility on a government website. The chatbot utilizes cutting-edge Natural Language Processing (NLP) techniques to provide real-time assistance, answer queries, and guide users through various services and information resources. By integrating LLMs, the chatbot offers intelligent responses and adapts to user inputs, improving overall user experience and efficiency in accessing government services.</p>
-                <h3>Portfolio Topic 2</h3>
-                <p>Creating ML Model on Calculating Delay of Trains on Various Factors:</p>
-                <p>Designed and implemented a machine learning model to predict train delays based on various factors such as weather conditions, infrastructure issues, and historical data. The model leverages advanced regression techniques and data analysis to accurately forecast potential delays, enabling railway authorities to proactively manage schedules, optimize resources, and minimize disruptions. By harnessing the power of machine learning, the model empowers decision-makers to make informed operational decisions and improve the reliability of train services.</p>
-                <h3>Portfolio Topic 3</h3>
-                <p>Creating Air Pollution Prediction Using LSTM:</p>
-                <p>Developed an innovative LSTM (Long Short-Term Memory) based model for predicting air pollution levels in urban areas. By analyzing historical air quality data and environmental factors such as weather patterns and traffic congestion, the model generates accurate forecasts of pollution levels for different time intervals. This predictive capability enables city planners, policymakers, and environmental agencies to implement targeted interventions, mitigate pollution-related health risks, and enhance overall air quality management strategies.</p>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Machine Learning and Backend</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Libraries in Machine Learning</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flutter</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
-            <!-- Add more portfolio items -->
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React JS</h3>
+                  <p>Basics</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me using the form below or via email: guptavansh2404@gmail.com</p>
-            <form action="#" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+                <h2 class="experience-sub-title project-title">Project One</h2>
+              <div class="article-container">
+                <!-- Add your three-liner description here -->
+                <p>A web application for comparing ecommerce website.</p>
+              </div>
+              
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/orgs/Team-Project-Vadodara-Hackhathon/repositories'"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+                <h2 class="experience-sub-title project-title">Project Two</h2>
+              <div class="article-container">
+                <!-- Add your three-liner description here -->
+                <p>An AI-based chatbot for providing customer support and assistance for government.</p>
+              </div>
+              
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/VanshGupta-2404/AirPollutiondetectorusingLSTM'"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+              <div class="article-container">
+                <!-- Add your three-liner description here -->
+                <p>A machine learning model for predicting delay of train on various factors.</p>
+              </div>
+              
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/VanshGupta-2404/ChatBOT_Hackathon'"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+      
     <footer>
-        <div class="container">
-            <div class="contact-info">
-                <p>Email: guptavansh2404@gmail.com</p>
-                <p>Phone: 7291801921</p>
-                <p>Location: Vadodara,Gujarat</p>
-            </div>
-            <p>&copy; 2024 Vansh Gupta. All rights reserved.</p>
-            <!-- Add any additional footer content or links -->
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
+      </nav>
+      <p>Copyright &#169; Vansh Gupta. All Rights Reserved.</p>
     </footer>
-    
-
-    <!-- Add any additional scripts or external JavaScript files here -->
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
